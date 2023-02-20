@@ -3,7 +3,7 @@ Sakila Database project
 
 USE sakila;
 
-# 1 - list of actors avaiable on the database table and last updated date
+# 1 - list of actors available on the database table and last updated date
 
 SELECT last_name, first_name, last_update
 	FROM actor;
@@ -87,14 +87,7 @@ SELECT MAX(a.first_name), a.last_name,
        COUNT(DISTINCT a.first_name) as num_first_names
 FROM actor AS a
 GROUP BY a.last_name
-HAVING COUNT(DISTINCT a.first_name) = 1;
-
-
-# TASK 4
-# The management needs to categorize the actors playing identity roles, such as Action, Romance, Horror
-# and Mystery. For this, the board members want to have a detailed overview of films based on the actors' preference
-
-
+HAVING COUNT(DISTINCT a.first_name) = 1
 
 
 # TASK 5
